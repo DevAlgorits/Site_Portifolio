@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kayky Bittencourt — Desenvolvedor de Integrações e Automação</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+ <div class="nav-logo">kb.dev</div>
+ <ul class="nav-links" id="navLinks">
+ <li><a href="#about">Sobre</a></li>
+ <li><a href="#projects">Projetos</a></li>
+ <li><a href="#experience">Experiência</a></li>
+ <li><a href="#stack">Stack</a></li>
+ <li><a href="#contact">Contato</a></li>
+ </ul>
+ <button class="hamburger" id="hamburger" aria-label="Menu">
+ <span></span><span></span><span></span>
+ </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+ <div class="hero-inner">
+ <div class="hero-tag">Disponível para novas oportunidades</div>
+ <h1 class="hero-name">Kayky<br><span>Bittencourt</span></h1>
+ <h2 class="hero-title">Desenvolvedor de Integrações e Automação</h2>
+ <p class="hero-desc">
+ Especializado em <strong>integração entre sistemas</strong>, <strong>automação de processos operacionais</strong> e consumo de <strong>APIs REST</strong>. Atuo na ponte entre requisitos de negócio e soluções técnicas, com foco em sistemas ERP, manipulação de dados estruturados <strong>(JSON, XML)</strong> e scripts de automação em Python.
+ </p>
+ <div class="hero-pills">
+ <span class="pill">APIs REST</span>
+ <span class="pill">Python</span>
+ <span class="pill">Integrações ERP</span>
+ <span class="pill">JSON · XML</span>
+ <span class="pill">Automação de Processos</span>
+ </div>
+ <div class="hero-cta">
+ <a href="#projects" class="btn-primary">
+ <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+ Ver Projetos
+ </a>
+ <a href="#contact" class="btn-outline">Entrar em Contato</a>
+ </div>
+ </div>
+ <div class="hero-game">
+ <div class="game-header">
+ <div>~ cobrinha.py</div>
+ <div class="game-score">Score: <span id="gameScore">0</span></div>
+ <div class="game-controls">↑↓←→ ou WASD</div>
+ </div>
+ <div class="game-canvas">
+ <canvas id="snakeCanvas" width="360" height="320"></canvas>
+ <div class="game-overlay" id="gameOverlay">
+ <h4>~ snake.py</h4>
+ <p>Pressione qualquer tecla</p>
+ <button class="game-btn" onclick="startGame()">Iniciar Jogo</button>
+ </div>
+ </div>
+ </div>
+ <div class="hero-scroll">scroll</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+ <div class="section-header fade-in">
+ <div>
+ <div class="section-label">// 01</div>
+ <h2 class="section-title">Sobre</h2>
+ </div>
+ <div class="section-line"></div>
+ </div>
+ <div class="about-grid fade-in">
+ <div class="about-text">
+ <p>
+ Desenvolvedor backend com atuação focada em <strong>integração de sistemas</strong> e <strong>automação de processos empresariais</strong>. Minha experiência central está em conectar plataformas distintas — ERPs, sistemas internos e APIs de terceiros — através de soluções técnicas consistentes e de fácil manutenção.
+ </p>
+ <p>
+ Tenho capacidade de analisar requisitos de negócio, mapear fluxos operacionais e traduzir essas necessidades em código funcional. Trabalho bem tanto em contextos exploratórios — onde o problema ainda não está totalmente definido — quanto em demandas estruturadas com escopo claro.
+ </p>
+ <p>
+ Priorizo código <strong>legível, documentado e orientado à manutenibilidade</strong>. Tenho familiaridade com ambientes Linux, ferramentas de versionamento e containerização básica com Docker.
+ </p>
+ </div>
+ <div class="about-highlights">
+ <div class="highlight-card">
+ <h4>Integração de Sistemas</h4>
+ <p>Consumo e documentação de APIs REST, autenticação OAuth/token, parsing de JSON e XML, e criação de camadas de integração entre sistemas heterogêneos.</p>
+ </div>
+ <div class="highlight-card">
+ <h4>Automação de Processos</h4>
+ <p>Scripts Python para automação de tarefas repetitivas, processamento de arquivos e geração de relatórios estruturados a partir de fontes de dados diversas.</p>
+ </div>
+ <div class="highlight-card">
+ <h4>Análise de Requisitos</h4>
+ <p>Tradução de regras de negócio complexas em especificações técnicas implementáveis, com foco em sistemas financeiros, fiscais e operacionais.</p>
+ </div>
+ <div class="highlight-card">
+ <h4>Dados Estruturados</h4>
+ <p>Manipulação de JSON e XML para extração, transformação e carregamento de dados (ETL) em pipelines de integração.</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+ <div class="section-header fade-in">
+ <div>
+ <div class="section-label">// 02</div>
+ <h2 class="section-title">Projetos</h2>
+ </div>
+ <div class="section-line"></div>
+ </div>
+ <div class="projects-grid">
+
+ <div class="project-card fade-in">
+ <div class="project-card-top">
+ <div class="project-icon">🔗</div>
+ <span class="project-type">Integração ERP</span>
+ </div>
+ <h3>Automação de Faturamento via API Omie</h3>
+ <div class="project-row">
+ <span class="project-label">Problema</span>
+ <p>Processo manual de criação de pedidos e geração de NF-e consumia horas diárias da equipe financeira, com alta incidência de erros de digitação e retrabalho.</p>
+ </div>
+ <div class="project-row">
+ <span class="project-label">Solução</span>
+ <p>Integração com a API REST do ERP Omie para automatizar a criação de pedidos de venda, consulta de clientes e emissão de notas fiscais. A partir de dados estruturados em JSON, o script executa todo o fluxo de faturamento sem intervenção manual.</p>
+ </div>
+ <div class="impact-badge">↑ Redução de ~70% no tempo de emissão</div>
+ <div class="project-tags">
+ <span class="tag">Python</span>
+ <span class="tag">REST API</span>
+ <span class="tag">JSON</span>
+ <span class="tag">Omie ERP</span>
+ <span class="tag">NF-e</span>
+ </div>
+ </div>
+
+ <div class="project-card fade-in">
+ <div class="project-card-top">
+ <div class="project-icon">📄</div>
+ <span class="project-type">Processamento de Dados</span>
+ </div>
+ <h3>Parser de XML para Extração de NF-e</h3>
+ <div class="project-row">
+ <span class="project-label">Problema</span>
+ <p>Arquivos XML de notas fiscais eram processados manualmente, tornando a conciliação fiscal demorada e sujeita a erros de interpretação da estrutura do documento.</p>
+ </div>
+ <div class="project-row">
+ <span class="project-label">Solução</span>
+ <p>Desenvolvimento de um parser em Python utilizando ElementTree para extração sistemática de campos-chave (emitente, destinatário, itens, impostos, chave de acesso) com saída em CSV e JSON para consumo por outros sistemas.</p>
+ </div>
+ <div class="impact-badge">↑ Processamento de lotes sem intervenção manual</div>
+ <div class="project-tags">
+ <span class="tag">Python</span>
+ <span class="tag">XML</span>
+ <span class="tag">ElementTree</span>
+ <span class="tag">CSV</span>
+ <span class="tag">ETL</span>
+ </div>
+ </div>
+
+ <div class="project-card fade-in">
+ <div class="project-card-top">
+ <div class="project-icon">⚙️</div>
+ <span class="project-type">Automação de Processos</span>
+ </div>
+ <h3>Pipeline de Sincronização entre Sistemas</h3>
+ <div class="project-row">
+ <span class="project-label">Problema</span>
+ <p>Dados de clientes e pedidos precisavam ser replicados entre dois sistemas internos sem uma integração nativa, exigindo exportação e importação manual de planilhas.</p>
+ </div>
+ <div class="project-row">
+ <span class="project-label">Solução</span>
+ <p>Script Python agendado que consome a API do sistema de origem, normaliza os dados, e insere ou atualiza registros no sistema de destino via API REST. Inclui log de erros e controle de idempotência para reprocessamento seguro.</p>
+ </div>
+ <div class="impact-badge">↑ Eliminação de processo manual diário</div>
+ <div class="project-tags">
+ <span class="tag">Python</span>
+ <span class="tag">REST API</span>
+ <span class="tag">MongoDB</span>
+ <span class="tag">Cron</span>
+ <span class="tag">Logging</span>
+ </div>
+ </div>
+
+ <div class="project-card fade-in">
+ <div class="project-card-top">
+ <div class="project-icon">🗄️</div>
+ <span class="project-type">Backend · Dados</span>
+ </div>
+ <h3>Relatório Automatizado de Indicadores</h3>
+ <div class="project-row">
+ <span class="project-label">Problema</span>
+ <p>Relatórios operacionais eram gerados manualmente a partir de múltiplas fontes, dificultando a visibilidade rápida de métricas e atrasando decisões gerenciais.</p>
+ </div>
+ <div class="project-row">
+ <span class="project-label">Solução</span>
+ <p>Consolidação de dados via queries SQL e chamadas à API do ERP, processamento com Python e geração automatizada de relatório estruturado entregue por e-mail em horário configurável.</p>
+ </div>
+ <div class="impact-badge">↑ Relatórios diários sem interação humana</div>
+ <div class="project-tags">
+ <span class="tag">Python</span>
+ <span class="tag">SQL</span>
+ <span class="tag">smtplib</span>
+ <span class="tag">REST API</span>
+ <span class="tag">Automação</span>
+ </div>
+ </div>
+
+ </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+ <div class="section-header fade-in">
+ <div>
+ <div class="section-label">// 03</div>
+ <h2 class="section-title">Experiência</h2>
+ </div>
+ <div class="section-line"></div>
+ </div>
+ <div class="exp-list">
+
+ <div class="exp-item fade-in">
+ <div class="exp-meta">
+ <span class="exp-company">Omie</span>
+ <span class="exp-badge current">Atual</span>
+ </div>
+ <div class="exp-role">Desenvolvedor / Analista de Integrações</div>
+ <div class="exp-period">2023 — presente</div>
+ <ul class="exp-bullets">
+ <li>Consumo e integração com a API REST do ERP Omie para automação de fluxos financeiros, fiscais e operacionais.</li>
+ <li>Desenvolvimento de scripts Python para automação de processos recorrentes: faturamento, consulta de pedidos, sincronização de cadastros.</li>
+ <li>Análise de regras de negócio junto a stakeholders e tradução em especificações técnicas implementáveis.</li>
+ <li>Manipulação de arquivos XML (NF-e, NFS-e) para validação, parsing e integração com sistemas internos.</li>
+ <li>Suporte técnico a integradores e clientes no uso da API, incluindo diagnóstico de erros e documentação de fluxos.</li>
+ </ul>
+ </div>
+
+ <div class="exp-item fade-in">
+ <div class="exp-meta">
+ <span class="exp-company">Volpix</span>
+ <span class="exp-badge past">Anterior</span>
+ </div>
+ <div class="exp-role">Analista de Suporte Técnico / Infraestrutura</div>
+ <div class="exp-period">2021 — 2023</div>
+ <ul class="exp-bullets">
+ <li>Suporte técnico a sistemas internos e ambientes de produção Windows/Linux.</li>
+ <li>Manutenção e monitoramento de servidores, incluindo configuração de serviços e diagnóstico de falhas.</li>
+ <li>Primeiros contatos com automação via scripts de shell e PowerShell para tarefas operacionais recorrentes.</li>
+ <li>Apoio a implementações de sistemas em clientes, com levantamento de requisitos e configuração de ambientes.</li>
+ </ul>
+ </div>
+
+ <div class="exp-item fade-in">
+ <div class="exp-meta">
+ <span class="exp-company">TechCompress</span>
+ <span class="exp-badge past">Anterior</span>
+ </div>
+ <div class="exp-role">Suporte de TI / Técnico de Informática</div>
+ <div class="exp-period">2019 — 2021</div>
+ <ul class="exp-bullets">
+ <li>Manutenção de hardware, configuração de redes e suporte ao usuário final.</li>
+ <li>Administração de ambientes locais: Active Directory, DHCP, compartilhamento de rede.</li>
+ <li>Desenvolvimento de interesse em programação e automação como extensão das atividades de TI.</li>
+ </ul>
+ </div>
+
+ </div>
+</section>
+
+<!-- STACK -->
+<section id="stack">
+ <div class="section-header fade-in">
+ <div>
+ <div class="section-label">// 04</div>
+ <h2 class="section-title">Stack Técnica</h2>
+ </div>
+ <div class="section-line"></div>
+ </div>
+ <div class="stack-grid fade-in">
+
+ <div class="stack-group">
+ <div class="stack-group-title">Linguagens</div>
+ <div class="stack-items">
+ <div class="stack-item"><span class="stack-dot"></span> Python</div>
+ <div class="stack-item"><span class="stack-dot"></span> SQL</div>
+ <div class="stack-item"><span class="stack-dot"></span> Bash / Shell Script</div>
+ </div>
+ </div>
+
+ <div class="stack-group">
+ <div class="stack-group-title">Integrações &amp; APIs</div>
+ <div class="stack-items">
+ <div class="stack-item"><span class="stack-dot"></span> REST APIs</div>
+ <div class="stack-item"><span class="stack-dot"></span> JSON</div>
+ <div class="stack-item"><span class="stack-dot"></span> XML / NF-e / NFS-e</div>
+ <div class="stack-item"><span class="stack-dot"></span> OAuth 2.0 / Token Auth</div>
+ <div class="stack-item"><span class="stack-dot"></span> Webhooks</div>
+ </div>
+ </div>
+
+ <div class="stack-group">
+ <div class="stack-group-title">Dados &amp; Bancos</div>
+ <div class="stack-items">
+ <div class="stack-item"><span class="stack-dot"></span> MongoDB</div>
+ <div class="stack-item"><span class="stack-dot"></span> PostgreSQL</div>
+ <div class="stack-item"><span class="stack-dot"></span> MySQL</div>
+ <div class="stack-item"><span class="stack-dot"></span> ETL / Pipelines de dados</div>
+ </div>
+ </div>
+
+ <div class="stack-group">
+ <div class="stack-group-title">Ferramentas &amp; Infra</div>
+ <div class="stack-items">
+ <div class="stack-item"><span class="stack-dot"></span> Git / GitHub</div>
+ <div class="stack-item"><span class="stack-dot"></span> Docker</div>
+ <div class="stack-item"><span class="stack-dot"></span> Linux</div>
+ <div class="stack-item"><span class="stack-dot"></span> Cron / Agendamento</div>
+ <div class="stack-item"><span class="stack-dot"></span> Postman / Insomnia</div>
+ </div>
+ </div>
+
+ <div class="stack-group">
+ <div class="stack-group-title">Libs Python</div>
+ <div class="stack-items">
+ <div class="stack-item"><span class="stack-dot"></span> requests / httpx</div>
+ <div class="stack-item"><span class="stack-dot"></span> ElementTree / lxml</div>
+ <div class="stack-item"><span class="stack-dot"></span> pandas</div>
+ <div class="stack-item"><span class="stack-dot"></span> logging</div>
+ <div class="stack-item"><span class="stack-dot"></span> dotenv / pydantic</div>
+ </div>
+ </div>
+
+ <div class="stack-group">
+ <div class="stack-group-title">Contexto de Negócio</div>
+ <div class="stack-items">
+ <div class="stack-item"><span class="stack-dot"></span> ERP (Omie, SAP básico)</div>
+ <div class="stack-item"><span class="stack-dot"></span> Faturamento / NF-e</div>
+ <div class="stack-item"><span class="stack-dot"></span> Processos financeiros</div>
+ <div class="stack-item"><span class="stack-dot"></span> Análise de requisitos</div>
+ </div>
+ </div>
+
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+ <div class="section-header fade-in" style="justify-content: center; text-align: center;">
+ <div>
+ <div class="section-label">// 05</div>
+ <h2 class="section-title">Contato</h2>
+ </div>
+ </div>
+ <div class="contact-inner fade-in">
+ <p>Aberto a conversas sobre projetos de integração, automação, posições backend ou oportunidades de consultoria. A melhor forma de entrar em contato é pelo LinkedIn ou e-mail.</p>
+ <div class="contact-links">
+ <a href="https://github.com/kaykybittencourt" class="contact-link" target="_blank">
+ <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+ GitHub
+ </a>
+ <a href="https://linkedin.com/in/kaykybittencourt" class="contact-link" target="_blank">
+ <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+ LinkedIn
+ </a>
+ <a href="mailto:kayky@email.com" class="contact-link">
+ <svg viewBox="0 0 24 24" fill="none" stroke-width="1.75"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+ E-mail
+ </a>
+ </div>
+ </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+ <p>© 2025 Kayky Bittencourt</p>
+ <p>Desenvolvedor de Integrações e Automação · São Paulo, BR</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
