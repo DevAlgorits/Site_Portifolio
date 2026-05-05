@@ -1,6 +1,6 @@
-# Portfólio Profissional - Kayky Bittencourt
+# Portfólio Profissional - Kayky Bittencourt 
 
-> Site de portfólio profissional apresentando habilidades em desenvolvimento de integrações e automação.
+> Site de portfólio profissional apresentando habilidades em desenvolvimento de integrações e automação utilizando CLAUDE tambem.
 
 ## 📊 Visão Geral
 
@@ -133,12 +133,12 @@ site_portifolio/
 
 ---
 
-## 🧑‍❤️‍💋 Autor
+##  Autor
 
 **Kayky Bittencourt**  
 Desenvolvedor de Integrações e Automação
 
-- GitHub: [github.com/kaykyb](https://github.com/kaykyb)  
+- GitHub: [github.com/kaykyb](https://github.com/DevAlgorits)  
 - LinkedIn: [linkedin.com/in/kaykybittencourt](https://www.linkedin.com/in/kaykybittencourt)
 
 ---
